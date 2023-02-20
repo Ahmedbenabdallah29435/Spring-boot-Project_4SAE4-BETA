@@ -50,7 +50,9 @@ public class Plan {
     @Column
     private Integer room2;
 
+
     @Column
+
     private String description;
 
     @OneToMany(mappedBy = "planContractPlan")

@@ -6,7 +6,9 @@ import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import org.springframework.lang.Nullable;
+
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -30,6 +32,7 @@ public class ContractPlan {
 
     @Column
     private Integer price;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "plan_user_id")
     private User planUser;
@@ -37,5 +40,6 @@ public class ContractPlan {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "plan_contract_plan_id")
     private Plan planContractPlan;
+
 
 }

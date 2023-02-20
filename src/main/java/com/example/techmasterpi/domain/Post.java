@@ -58,7 +58,9 @@ public class Post {
     private User userPost;
 
 
+
     @ManyToMany
     private Set<Tag>  pOSTTAGTags;
+
 
 }

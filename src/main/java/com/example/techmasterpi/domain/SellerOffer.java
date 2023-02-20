@@ -49,6 +49,7 @@ public class SellerOffer {
     private TypeOffer typeoffer;
 
 
+
     @OneToMany(mappedBy = "contractSell")
     private Set<SellContract> contractSellSellContracts;
 

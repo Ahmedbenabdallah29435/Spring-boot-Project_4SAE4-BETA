@@ -35,6 +35,7 @@ public class Furniture {
     private String picture;
 
 
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "relocation_fourtniture_id")
     private Relocation relocationFourtniture;

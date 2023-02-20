@@ -38,5 +38,4 @@ public class SellContract {
     private User userContractsale;
 
 
-
 }

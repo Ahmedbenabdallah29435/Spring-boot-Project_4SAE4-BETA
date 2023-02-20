@@ -48,8 +48,10 @@ public class RentalOffer {
     @Enumerated(EnumType.STRING)
     private TypeROffer typerentalloffer;
 
+
     @OneToMany(mappedBy = "rentalofferRentalContract")
     private Set<RentalContract> rentalofferRentalContractRentalContracts;
+
 
 
 }

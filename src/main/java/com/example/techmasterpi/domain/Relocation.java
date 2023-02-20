@@ -1,10 +1,12 @@
 package com.example.techmasterpi.domain;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import java.time.LocalDate;
+
 import java.util.Set;
 
 @NoArgsConstructor
@@ -27,6 +29,7 @@ public class Relocation {
 
     @Column
     private String locationarr;
+
 
 
     @ManyToOne(fetch = FetchType.LAZY)

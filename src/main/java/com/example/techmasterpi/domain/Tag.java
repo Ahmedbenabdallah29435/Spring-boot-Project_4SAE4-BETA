@@ -3,9 +3,11 @@ package com.example.techmasterpi.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+
 import java.util.Set;
 
 @NoArgsConstructor
@@ -17,6 +19,7 @@ public class Tag {
 
     @Id
     @Column(nullable = false, updatable = false)
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int tag;
@@ -26,5 +29,6 @@ public class Tag {
 
     @ManyToMany(mappedBy = "pOSTTAGTags")
     private Set<Post> tags;
+
 
 }

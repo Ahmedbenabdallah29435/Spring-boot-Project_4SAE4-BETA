@@ -78,15 +78,6 @@ public class User {
     )
     private Set<Meeting> userMeetingMeetings;
 
-    @OneToMany(mappedBy = "planUser")
-    private Set<ContractPlan> planUserContractPlans;
-
-    @OneToOne
-    @JoinColumn(name = "contract_user_id")
-    private ContractPlan contractUser;
-
-    @OneToMany(mappedBy = "userSell")
-    private Set<SellerOffer> userSellSellerOffers;
 
     @OneToMany(mappedBy = "userContractsale")
     private Set<SellContract> userContractsaleSellContracts;
@@ -94,18 +85,13 @@ public class User {
     @OneToMany(mappedBy = "userRentalcontract")
     private Set<RentalContract> userRentalcontractRentalContracts;
 
-    @OneToMany(mappedBy = "userContartplan")
-    private Set<ContractPlan> userContartplanContractPlans;
+
+    @OneToMany(mappedBy = "planUser")
+    private Set<ContractPlan> planUser;
+
 
     @OneToMany(mappedBy = "userDelevery")
     private Set<Delivery> userDeleveryDeliverys;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
-
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

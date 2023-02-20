@@ -37,12 +37,5 @@ public class SellContract {
     @JoinColumn(name = "user_contractsale_id")
     private User userContractsale;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
-
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

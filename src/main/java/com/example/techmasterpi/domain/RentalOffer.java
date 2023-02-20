@@ -48,18 +48,10 @@ public class RentalOffer {
     @Enumerated(EnumType.STRING)
     private TypeROffer typerentalloffer;
 
-    @OneToMany(mappedBy = "rentalIOfferContractRental")
-    private Set<RentalContract> rentalIOfferContractRentalRentalContracts;
 
     @OneToMany(mappedBy = "rentalofferRentalContract")
     private Set<RentalContract> rentalofferRentalContractRentalContracts;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

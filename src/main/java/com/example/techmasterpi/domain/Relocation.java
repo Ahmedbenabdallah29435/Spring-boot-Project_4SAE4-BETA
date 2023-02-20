@@ -3,13 +3,10 @@ package com.example.techmasterpi.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.OffsetDateTime;
+
 import java.util.Set;
 
 @NoArgsConstructor
@@ -33,8 +30,7 @@ public class Relocation {
     @Column
     private String locationarr;
 
-    @OneToMany(mappedBy = "furnitureRelocation")
-    private Set<Furniture> furnitureRelocationFurnitures;
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_relocation_id")
@@ -46,12 +42,6 @@ public class Relocation {
     @OneToMany(mappedBy = "relocationFourtniture")
     private Set<Furniture> relocationFourtnitureFurnitures;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

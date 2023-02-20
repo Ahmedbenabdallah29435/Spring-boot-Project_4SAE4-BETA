@@ -50,18 +50,14 @@ public class Plan {
     @Column
     private Integer room2;
 
-    @Column(name = "\"description\"")
+
+    @Column
+
     private String description;
 
     @OneToMany(mappedBy = "planContractPlan")
     private Set<ContractPlan> planContractPlanContractPlans;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

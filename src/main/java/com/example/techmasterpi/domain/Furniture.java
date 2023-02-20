@@ -34,20 +34,12 @@ public class Furniture {
     @Column
     private String picture;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "furniture_relocation_id")
-    private Relocation furnitureRelocation;
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "relocation_fourtniture_id")
     private Relocation relocationFourtniture;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

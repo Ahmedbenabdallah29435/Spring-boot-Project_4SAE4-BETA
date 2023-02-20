@@ -42,12 +42,6 @@ public class Delivery {
     @JoinColumn(name = "relocation_delivery_id")
     private Relocation relocationDelivery;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

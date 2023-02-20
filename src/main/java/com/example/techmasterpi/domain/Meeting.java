@@ -39,12 +39,6 @@ public class Meeting {
     @ManyToMany(mappedBy = "userMeetingMeetings")
     private Set<User> userMeetingUsers;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

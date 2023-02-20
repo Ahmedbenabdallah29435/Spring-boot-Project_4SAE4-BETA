@@ -39,12 +39,8 @@ public class Complaint {
     @JoinColumn(name = "user_complain_id")
     private User userComplain;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
+
+
 
 }

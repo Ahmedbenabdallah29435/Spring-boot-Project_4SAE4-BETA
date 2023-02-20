@@ -29,9 +29,7 @@ public class RentalContract {
     @Column
     private Integer nbmonth;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "rentalioffer_contract_rental_id")
-    private RentalOffer rentalIOfferContractRental;
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_rentalcontract_id")
@@ -41,12 +39,6 @@ public class RentalContract {
     @JoinColumn(name = "rentaloffer_rental_contract_id")
     private RentalOffer rentalofferRentalContract;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

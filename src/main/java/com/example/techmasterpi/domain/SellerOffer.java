@@ -48,19 +48,11 @@ public class SellerOffer {
     @Enumerated(EnumType.STRING)
     private TypeOffer typeoffer;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_sell_id")
-    private User userSell;
+
 
     @OneToMany(mappedBy = "contractSell")
     private Set<SellContract> contractSellSellContracts;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

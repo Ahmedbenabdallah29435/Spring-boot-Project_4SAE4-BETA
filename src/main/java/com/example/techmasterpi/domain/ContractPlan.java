@@ -7,6 +7,10 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+
+import org.springframework.lang.Nullable;
+
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
@@ -24,6 +28,7 @@ public class ContractPlan {
     private Integer contractId;
 
     @Column
+
     private LocalDate contractDate;
 
     @Column
@@ -33,23 +38,11 @@ public class ContractPlan {
     @JoinColumn(name = "plan_user_id")
     private User planUser;
 
-    @OneToOne(mappedBy = "contractUser", fetch = FetchType.LAZY)
-    private User contractUser;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_contartplan_id")
-    private User userContartplan;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "plan_contract_plan_id")
     private Plan planContractPlan;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
 
 }

@@ -57,20 +57,11 @@ public class Post {
     @JoinColumn(name = "user_post_id")
     private User userPost;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(
-            name = "posttag",
-            joinColumns = @JoinColumn(name = "post_postid"),
-            inverseJoinColumns = @JoinColumn(name = "tag_tag")
-    )
-    private Set<Tag> pOSTTAGTags;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private OffsetDateTime dateCreated;
 
-    @LastModifiedDate
-    @Column(nullable = false)
-    private OffsetDateTime lastUpdated;
+
+    @ManyToMany
+    private Set<Tag>  pOSTTAGTags;
+
 
 }

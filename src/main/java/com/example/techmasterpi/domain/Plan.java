@@ -51,7 +51,9 @@ public class Plan {
     private Integer room2;
 
 
+
     @Column
+
 
     private String description;
 

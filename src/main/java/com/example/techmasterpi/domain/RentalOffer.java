@@ -49,9 +49,9 @@ public class RentalOffer {
     private TypeROffer typerentalloffer;
 
 
+
     @OneToMany(mappedBy = "rentalofferRentalContract")
     private Set<RentalContract> rentalofferRentalContractRentalContracts;
-
 
 
 }

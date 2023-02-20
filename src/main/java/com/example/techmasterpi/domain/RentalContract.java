@@ -40,4 +40,5 @@ public class RentalContract {
     private RentalOffer rentalofferRentalContract;
 
 
+
 }

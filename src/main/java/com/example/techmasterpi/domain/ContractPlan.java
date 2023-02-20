@@ -7,6 +7,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+
 import org.springframework.lang.Nullable;
 
 
@@ -37,9 +38,11 @@ public class ContractPlan {
     @JoinColumn(name = "plan_user_id")
     private User planUser;
 
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "plan_contract_plan_id")
     private Plan planContractPlan;
+
 
 
 }

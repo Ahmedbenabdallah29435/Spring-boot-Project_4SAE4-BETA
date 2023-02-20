@@ -79,6 +79,8 @@ public class User {
     private Set<Meeting> userMeetingMeetings;
 
 
+
+
     @OneToMany(mappedBy = "userContractsale")
     private Set<SellContract> userContractsaleSellContracts;
 
@@ -90,8 +92,10 @@ public class User {
     private Set<ContractPlan> planUser;
 
 
+
     @OneToMany(mappedBy = "userDelevery")
     private Set<Delivery> userDeleveryDeliverys;
+
 
 
 }

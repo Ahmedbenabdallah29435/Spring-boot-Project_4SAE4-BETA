@@ -2,6 +2,7 @@ package com.example.techmasterpi.domain;
 
 import com.example.techmasterpi.model.NameRole;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -20,10 +21,12 @@ import java.util.List;
 import java.util.Set;
 
 
+
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -83,6 +86,8 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 
     @OneToMany(mappedBy = "userRelocation")
     private Set<Relocation> userRelocationRelocations;
